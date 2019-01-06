@@ -1,0 +1,16 @@
+C:\Users\Максим\source\repos\SymbolicLab2\SymbolicLab2\bin\Debug\SymbolicLab2.exe.config
+C:\Users\Максим\source\repos\SymbolicLab2\SymbolicLab2\bin\Debug\SymbolicLab2.exe
+C:\Users\Максим\source\repos\SymbolicLab2\SymbolicLab2\bin\Debug\SymbolicLab2.pdb
+C:\Users\Максим\source\repos\SymbolicLab2\SymbolicLab2\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Максим\source\repos\SymbolicLab2\SymbolicLab2\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\Максим\source\repos\SymbolicLab2\SymbolicLab2\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Максим\source\repos\SymbolicLab2\SymbolicLab2\obj\Debug\SymbolicLab2.csprojAssemblyReference.cache
+C:\Users\Максим\source\repos\SymbolicLab2\SymbolicLab2\obj\Debug\SymbolicLab2.csproj.CoreCompileInputs.cache
+C:\Users\Максим\source\repos\SymbolicLab2\SymbolicLab2\obj\Debug\SymbolicLab2.csproj.CopyComplete
+C:\Users\Максим\source\repos\SymbolicLab2\SymbolicLab2\obj\Debug\SymbolicLab2.exe
+C:\Users\Максим\source\repos\SymbolicLab2\SymbolicLab2\obj\Debug\SymbolicLab2.pdb
+C:\Users\Максим\source\repos\SymbolicLab2\SymbolicLab2\bin\Debug\ScottPlot.dll
+C:\Users\Максим\source\repos\SymbolicLab2\SymbolicLab2\bin\Debug\ScottPlot.pdb
+C:\Users\Максим\source\repos\SymbolicLab2\SymbolicLab2\obj\Debug\SymbolicLab2.Drawers.PlotForm.resources
+C:\Users\Максим\source\repos\SymbolicLab2\SymbolicLab2\obj\Debug\SymbolicLab2.csproj.GenerateResource.cache
+C:\Users\Максим\source\repos\SymbolicLab2\SymbolicLab2\obj\Debug\SymbolicLab2.Properties.Resources.resources
