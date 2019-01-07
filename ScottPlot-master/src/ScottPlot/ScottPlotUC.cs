@@ -159,7 +159,7 @@ namespace ScottPlot
             // style the plot area
             fig.styleForm();
             fig.Zoom(.8, .8);
-            fig.labelTitle = "ScottPlot User Control";
+            fig.labelTitle = "f(x) plot";
         }
 
         public void AxisAuto()
