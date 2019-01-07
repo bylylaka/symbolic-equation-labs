@@ -34,10 +34,11 @@
             // scottPlotUC1
             // 
             this.scottPlotUC1.Cursor = System.Windows.Forms.Cursors.SizeAll;
-            this.scottPlotUC1.Location = new System.Drawing.Point(11, 11);
+            this.scottPlotUC1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.scottPlotUC1.Location = new System.Drawing.Point(0, 0);
             this.scottPlotUC1.Margin = new System.Windows.Forms.Padding(2);
             this.scottPlotUC1.Name = "scottPlotUC1";
-            this.scottPlotUC1.Size = new System.Drawing.Size(778, 428);
+            this.scottPlotUC1.Size = new System.Drawing.Size(800, 450);
             this.scottPlotUC1.TabIndex = 0;
             this.scottPlotUC1.Load += new System.EventHandler(this.scottPlotUC1_Load);
             // 
@@ -51,6 +52,7 @@
             this.Text = "Plot";
             this.Load += new System.EventHandler(this.PlotForm_Load);
             this.ResumeLayout(false);
+
         }
 
 
