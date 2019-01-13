@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace SymbolicLab2
 {
@@ -9,6 +10,13 @@ namespace SymbolicLab2
         public Decomposed()
         {
             Factors = new List<Factor>();
+        }
+
+        public override string ToString()
+        {
+            var a = Factors.Select(factor => $"({factor.ToString()})");
+            var factorString = string.Join(null, a);
+            return factorString;
         }
     }
 }

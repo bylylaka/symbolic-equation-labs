@@ -72,5 +72,12 @@ namespace SymbolicLab2
 
             return new Factor(newTerms.ToList());
         }
+
+        public override string ToString()
+        {
+            var a = Terms.Select(term => term.ToString());
+            var factorString = string.Join(null, a);
+            return factorString;
+        }
     }
 }

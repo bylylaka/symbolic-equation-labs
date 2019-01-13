@@ -26,6 +26,8 @@ namespace SymbolicLab2.Calculator
 
                     if (dividedPart != null)
                     {
+                        Console.WriteLine(decomposed);
+
                         var newdividerFactor = new Factor();
                         newdividerFactor.Terms = new List<Term>(){
                             new Term
