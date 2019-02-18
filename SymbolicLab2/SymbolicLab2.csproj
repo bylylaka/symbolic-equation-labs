@@ -69,6 +69,30 @@
     <Compile Include="Calculator\GornersDividor.cs" />
     <Compile Include="Calculator\ICalculator.cs" />
     <Compile Include="Calculator\IFactorizer.cs" />
+    <Compile Include="Calculator\UserAlgorithm\IUserAlgorithmStrategy.cs" />
+    <Compile Include="Calculator\UserAlgorithm\IUserAlgorithmStrategyProvider.cs" />
+    <Compile Include="Calculator\UserAlgorithm\Model\AppendUserAlgorithmModel.cs" />
+    <Compile Include="Calculator\UserAlgorithm\Model\Condition.cs" />
+    <Compile Include="Calculator\UserAlgorithm\Model\DeclareUserAlgorithmModel.cs" />
+    <Compile Include="Calculator\UserAlgorithm\Model\IfUserAlgorithmModel.cs" />
+    <Compile Include="Calculator\UserAlgorithm\Model\ReturnUserAlgorithmModel.cs" />
+    <Compile Include="Calculator\UserAlgorithm\Model\UserAlgorithmModel.cs" />
+    <Compile Include="Calculator\UserAlgorithm\Model\SetUserAlgorithmModel.cs" />
+    <Compile Include="Calculator\UserAlgorithm\Model\VatiableType.cs" />
+    <Compile Include="Calculator\UserAlgorithm\Model\WhileUserAlgorithmModel.cs" />
+    <Compile Include="Calculator\UserAlgorithm\NumberFactorsCalculator.cs" />
+    <Compile Include="Calculator\UserAlgorithm\Strategies\AppendUserAlgorithmStrategy.cs" />
+    <Compile Include="Calculator\UserAlgorithm\Strategies\DeclareUserAlgorithmStrategy.cs" />
+    <Compile Include="Calculator\UserAlgorithm\Strategies\IfUserAlgorithmStrategy.cs" />
+    <Compile Include="Calculator\UserAlgorithm\Strategies\ReturnUserAlgortihmStrategy.cs" />
+    <Compile Include="Calculator\UserAlgorithm\Strategies\WhileUserAlgortihmStrategy.cs" />
+    <Compile Include="Calculator\UserAlgorithm\UserAlgorithmExecutor.cs" />
+    <Compile Include="Calculator\UserAlgorithm\UserAlorithmStore.cs" />
+    <Compile Include="Calculator\UserAlgorithm\UserAlgorithmStrategyProvider.cs" />
+    <Compile Include="Calculator\UserAlgorithm\Strategies\SetUserAlgorithmStrategy.cs" />
+    <Compile Include="Calculator\UserAlgorithm\UserExpressionCalculator.cs" />
+    <Compile Include="Calculator\UserAlgorithm\UserGraphic\Model\PointModel.cs" />
+    <Compile Include="Calculator\UserAlgorithm\UserGraphic\UserGraphicDataInitializer.cs" />
     <Compile Include="Configuration\Configurator.cs" />
     <Compile Include="Configuration\ExceptionHandlers\ExceptionHandler.cs" />
     <Compile Include="Configuration\ExceptionHandlers\IExceptionHandler.cs" />
@@ -90,13 +114,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Reader\IAlgorithmReader.cs" />
+    <Compile Include="Reader\JsonAlgorithmReader.cs" />
     <Compile Include="Shared\Models\Decomposed.cs" />
     <Compile Include="Shared\Models\Factor.cs" />
     <Compile Include="Mappers\Mapper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reader\IReader.cs" />
-    <Compile Include="Reader\JsonReader.cs" />
+    <Compile Include="Reader\IExpressionReader.cs" />
+    <Compile Include="Reader\JsonExpressionReader.cs" />
     <Compile Include="Reader\Models\JsonTerm.cs" />
     <Compile Include="Reader\Operation.cs" />
     <Compile Include="Shared\Models\Sign.cs" />
@@ -137,5 +163,6 @@
       <Name>ScottPlot</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

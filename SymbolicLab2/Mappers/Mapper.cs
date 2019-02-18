@@ -4,7 +4,7 @@ namespace SymbolicLab2.Mappers
 {
     public class Mapper
     {
-        public static Term MapNumberToTerm(int number, int power)
+        public static Term MapNumberToTerm(double number, int power)
         {
             var term = new Term
             {

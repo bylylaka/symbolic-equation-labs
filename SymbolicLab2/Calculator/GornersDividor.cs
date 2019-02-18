@@ -8,13 +8,13 @@ namespace SymbolicLab2.Calculator
         public Factor Divide(Factor firstParam, int dividigNumberValue)
         {
             var maxPower = firstParam.Terms.Max(term => term.SymbolsPower);
-            var dataTerms = new int[maxPower + 1];
+            var dataTerms = new double[(int) maxPower + 1];
 
             //initialize 0 if there is no x in such power
-            firstParam.Terms.ForEach(term => dataTerms[term.SymbolsPower] = (term.Sign == Sign.Plus) ? term.Number : -term.Number);
+            firstParam.Terms.ForEach(term => dataTerms[(int) term.SymbolsPower] = (term.Sign == Sign.Plus) ? term.Number : -term.Number);
             dataTerms = dataTerms.Reverse().ToArray();
 
-            var newIndexes = new int[dataTerms.Count()];
+            var newIndexes = new double[dataTerms.Count()];
             newIndexes[0] = dataTerms[0];
 
             for (int i = 1; i < newIndexes.Length; i++)

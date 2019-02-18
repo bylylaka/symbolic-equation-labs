@@ -7,13 +7,15 @@ namespace SymbolicLab2.Configuration
 {
     class Configurator : IConfigurator
     {
-        public override string InputFile => (Directory.GetCurrentDirectory() + "\\input.json");
-        public override string OutputFile => Directory.GetCurrentDirectory() + "\\output.xml";
+        public override string InputExpressionFile => Path.Combine(Directory.GetCurrentDirectory(), "inputExpression.json");
+        public override string InputAlgorithmExpressionFile => Path.Combine(Directory.GetCurrentDirectory(), "inputAlgorithm.json");
+        public override string InputGraphicDataSetExpressionFile => Path.Combine(Directory.GetCurrentDirectory(), "inputGraphicDataSet.json");
+        public override string OutpuExpressiontFile => Path.Combine(Directory.GetCurrentDirectory(), "outputExpression.xml");
 
         public override void Configure(IExceptionHandler exceptionHandler)
         {
-            AppDomain.CurrentDomain.UnhandledException += exceptionHandler.UnhandledExceptionTrapper;
-            Application.EnableVisualStyles();
+            //AppDomain.CurrentDomain.UnhandledException += exceptionHandler.UnhandledExceptionTrapper;
+            //Application.EnableVisualStyles();
         }
     }
 }

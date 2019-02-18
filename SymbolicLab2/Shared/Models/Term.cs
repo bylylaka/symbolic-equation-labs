@@ -2,9 +2,9 @@
 {
     public class Term
     {
-        public int Number { get; set; }
+        public double Number { get; set; }
         public char? Symbol { get; set; }
-        public int SymbolsPower { get; set; }
+        public double SymbolsPower { get; set; }
         public Sign Sign { get; set; }
 
         public override string ToString()

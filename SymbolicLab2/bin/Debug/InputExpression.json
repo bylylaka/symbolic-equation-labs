@@ -1,0 +1,74 @@
+////x^4-15x^2+24-10x
+{
+  "Operation": "+",
+  "FirstParam": {
+    "Operation": "-",
+    "FirstParam": {
+      "Operation": "^",
+      "FirstParam": {
+        "SymbolicValue": "x"
+      },
+      "SecondParam": {
+        "NumberValue": 4
+      }
+    },
+    "SecondParam": {
+      "Operation": "*",
+      "FirstParam": {
+        "NumberValue": 15
+      },
+      "SecondParam": {
+        "Operation": "^",
+        "FirstParam": {
+          "SymbolicValue": "x"
+        },
+        "SecondParam": {
+          "NumberValue": 2
+        }
+      }
+    }
+  },
+  "SecondParam": {
+    "Operation": "-",
+    "FirstParam": {
+      "NumberValue": 24
+    },
+    "SecondParam": {
+      "Operation": "*",
+      "FirstParam": {
+        "NumberValue": 10
+      },
+      "SecondParam": {
+        "SymbolicValue": "x"
+      }
+    }
+  }
+}
+
+//{
+//  "Operation": "+",
+//  "FirstParam": {
+//    "Operation": "*",
+//    "FirstParam": {
+//      "NumberValue": 5
+//    },
+//    "SecondParam": {
+//      "SymbolicValue": "x"
+//    }
+//  },
+//  "SecondParam": {
+//    "Operation": "*",
+//    "FirstParam": {
+//      "NumberValue": 22
+//    },
+//    "SecondParam": {
+//      "Operation": "*",
+//      "FirstParam": {
+//        "NumberValue": 13
+//      },
+//      "SecondParam": {
+//        "SymbolicValue": "x"
+//      }
+//    }
+//  }
+//}

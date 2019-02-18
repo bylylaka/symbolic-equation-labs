@@ -71,15 +71,15 @@ namespace SymbolicLab2.Converters
 
                     if (term.Symbol != null && term.Symbol != default(char))
                     {
-                        string insideOperation = "&InvisibleTimes;";
+                        var insideOperation = "&InvisibleTimes;";
 
                         mfenced.Terms.Add(insideOperation);  //number *
 
                         var insideMsup = new MsupElement();
 
-                        char symbolicValue = term.Symbol.Value;
+                        var symbolicValue = term.Symbol.Value;
 
-                        int symbolPower = term.SymbolsPower;
+                        var symbolPower = term.SymbolsPower;
 
                         insideMsup.Terms.Add(symbolicValue);
                         insideMsup.Terms.Add(symbolPower);

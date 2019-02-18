@@ -14,6 +14,8 @@ namespace SymbolicLab2.Reader
         Multiply,
         [EnumMember(Value = "/")]
         Divide,
+        [EnumMember(Value = "%")]
+        Mod,
         [EnumMember(Value = "^")]
         Power,
     }

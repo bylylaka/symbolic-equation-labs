@@ -1,14 +1,19 @@
-﻿using System.Windows.Forms;
+﻿using System.Linq;
+using System.Windows.Forms;
 
 namespace SymbolicLab2.Drawers
 {
     class Drawer
     {
-        public void Draw(DrawerModel model)
+        public void Draw(DrawerModel[] models)
         {
             var form = new PlotForm();
-            form.DrawPlot(model);
 
+            models.ToList().ForEach(model =>
+            {
+                form.DrawPlot(model);
+            });
+           
             Application.Run(form);
         }
     }

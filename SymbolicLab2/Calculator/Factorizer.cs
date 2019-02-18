@@ -1,4 +1,7 @@
-﻿using System;
+﻿using SymbolicLab2.Calculator.NumberFactor;
+using SymbolicLab2.Calculator.NumberFactors;
+using SymbolicLab2.Calculator.UserAlgorithm;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -6,7 +9,12 @@ namespace SymbolicLab2.Calculator
 {
     public class Factorizer : ICalculator, IFactorizer
     {
-        public Decomposed Execute(Factor factors, IDivider divider)
+        public Decomposed Execute(
+            Factor factors,
+            IDivider divider,
+            dynamic algorithm,
+            IUserAlgorithmStrategyProvider strategtProvider
+        )
         {
             factors = Normalize(factors);
             var decomposed = new Decomposed();
@@ -18,7 +26,10 @@ namespace SymbolicLab2.Calculator
             while (continueFlag)
             {
                 continueFlag = false;
-                var freeTermFactors = GetNumberFactors(decomposed.Factors.Last().Terms.Where(x => x.SymbolsPower == 0).Select(term => term.Number).FirstOrDefault());
+                var freeTermFactors = (List<int>)GetNumberFactors(decomposed.Factors.Last().Terms.Where(x => x.SymbolsPower == 0).Select(term => term.Number).FirstOrDefault(),
+                    algorithm,
+                    strategtProvider
+                );
 
                 freeTermFactors.ForEach(coefficent =>
                 {
@@ -73,18 +84,19 @@ namespace SymbolicLab2.Calculator
             return factors;
         }
 
-        public List<int> GetNumberFactors(int number)
+        public List<int> GetNumberFactors(
+            double number,
+            dynamic algorithm,
+            IUserAlgorithmStrategyProvider strategtProvider
+        )
         {
-            var factors = new List<int>();
-            for (int i = 1; i <= number; i++)
-            {
-                if (number % i == 0)
-                {
-                    factors.Add(i);
-                    factors.Add(-i);
-                }
-            }
-            return factors;
+            var store = new UserAlgorithmStore();
+            var numberFactorsExecutor = new NumberFactorsCalculator();
+
+            var numbers = (List<double>)numberFactorsExecutor.GetNumberFactors((int)number, algorithm, strategtProvider, store);
+            var result = numbers.Select(x => (int)x).ToList();
+
+            return result;
         }
     }
 }

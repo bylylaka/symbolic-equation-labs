@@ -3,8 +3,10 @@ using SymbolicLab2.Configuration;
 using SymbolicLab2.DrawerDataInitializers;
 using SymbolicLab2.Drawers;
 using SymbolicLab2.Writer;
-using JsonReader = SymbolicLab2.Reader.JsonReader;
+using JsonExpressionReader = SymbolicLab2.Reader.JsonExpressionReader;
 using System;
+using SymbolicLab2.Reader;
+using SymbolicLab2.Calculator.NumberFactor;
 
 namespace SymbolicLab2
 {
@@ -19,20 +21,27 @@ namespace SymbolicLab2
         {
             var configurator = new Configurator();
             var exceptionHandler = new ExceptionHandler();
-            var reader = new JsonReader();
+            var expressionReader = new JsonExpressionReader();
+            var algorithmReader = new JsonAlgorithmReader();
             var calculator = new Factorizer();
             var divider = new GornersDividor();
             var writer = new MathMlWriter();
             var drawerDataInitializer = new DrawerDataInitializer();
             var drawer = new Drawer();
+            var userAlgorithmStrategyProvider = new UserAlgorithmStrategyProvider();
 
             configurator.Configure(exceptionHandler);
 
-            var factors = reader.Read(configurator.InputFile);
-            var decomposed = calculator.Execute(factors, divider);
-            writer.Write(decomposed, configurator.OutputFile);
+            var factors = expressionReader.Read(configurator.InputExpressionFile);
+            var algorithm = algorithmReader.Read(configurator.InputAlgorithmExpressionFile);
+            var grephicDataSet = algorithmReader.Read(configurator.InputGraphicDataSetExpressionFile);
+            
+            var decomposed = calculator.Execute(factors, divider, algorithm, userAlgorithmStrategyProvider);
+            writer.Write(decomposed, configurator.OutpuExpressiontFile);
 
-            var drawerData = drawerDataInitializer.GetDrawerData(factors, start, end, step);
+            var drawerData = drawerDataInitializer.GetDrawerData(grephicDataSet, userAlgorithmStrategyProvider);
+
+            //var drawerData = drawerDataInitializer.GetDrawerData(factors, start, end, step);
             drawer.Draw(drawerData);
         }
     }

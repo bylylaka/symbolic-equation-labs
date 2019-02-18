@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<MathMlTerm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="MathElement">
+  <mf>
+    <mo>+</mo>
+    <Terms xsi:type="xsd:double">1</Terms>
+    <mo>&amp;InvisibleTimes;</mo>
+    <msup>
+      <mo>x</mo>
+      <Terms xsi:type="xsd:double">1</Terms>
+    </msup>
+    <mo>-</mo>
+    <Terms xsi:type="xsd:double">4</Terms>
+  </mf>
+  <mf>
+    <mo>+</mo>
+    <Terms xsi:type="xsd:double">1</Terms>
+    <mo>&amp;InvisibleTimes;</mo>
+    <msup>
+      <mo>x</mo>
+      <Terms xsi:type="xsd:double">1</Terms>
+    </msup>
+    <mo>+</mo>
+    <Terms xsi:type="xsd:double">3</Terms>
+  </mf>
+  <mf>
+    <mo>+</mo>
+    <Terms xsi:type="xsd:double">1</Terms>
+    <mo>&amp;InvisibleTimes;</mo>
+    <msup>
+      <mo>x</mo>
+      <Terms xsi:type="xsd:double">1</Terms>
+    </msup>
+    <mo>+</mo>
+    <Terms xsi:type="xsd:double">2</Terms>
+  </mf>
+  <mf>
+    <mo>+</mo>
+    <Terms xsi:type="xsd:double">1</Terms>
+    <mo>&amp;InvisibleTimes;</mo>
+    <msup>
+      <mo>x</mo>
+      <Terms xsi:type="xsd:double">1</Terms>
+    </msup>
+    <mo>-</mo>
+    <Terms xsi:type="xsd:double">1</Terms>
+  </mf>
+  <mf>
+    <mo>+</mo>
+    <Terms xsi:type="xsd:double">1</Terms>
+  </mf>
+</MathMlTerm>

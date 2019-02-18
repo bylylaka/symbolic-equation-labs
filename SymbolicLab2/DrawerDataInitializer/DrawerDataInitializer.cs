@@ -1,4 +1,7 @@
-﻿using SymbolicLab2.Drawers;
+﻿using SymbolicLab2.Calculator.NumberFactors;
+using SymbolicLab2.Calculator.UserAlgorithm;
+using SymbolicLab2.Calculator.UserAlgorithm.UserGraphic;
+using SymbolicLab2.Drawers;
 using SymbolicLab2.DrowerDataInitializers;
 using System;
 
@@ -30,6 +33,24 @@ namespace SymbolicLab2.DrawerDataInitializers
             }
 
             return drawModel;
+        }
+
+
+        public DrawerModel[] GetDrawerData(
+           dynamic algorithm,
+           IUserAlgorithmStrategyProvider strategtProvider
+       )
+        {
+            var store = new UserAlgorithmStore();
+            var userGrapgicDataInitializer = new UserGraphicDataInitializer();
+
+            dynamic userFunction = algorithm["Function"];
+            var drawerFunctionModel = (DrawerModel)userGrapgicDataInitializer.GetGraphicDataFromFunction(userFunction, strategtProvider, store);
+
+            dynamic userSetOfPoints = algorithm["SetOfPoints"];
+            var drawerSetOfPointsModel = (DrawerModel)userGrapgicDataInitializer.GetGraphicDataFromSetOfPoints(userSetOfPoints, strategtProvider, store);
+
+            return new DrawerModel[] { drawerFunctionModel, drawerSetOfPointsModel };
         }
     }
 }

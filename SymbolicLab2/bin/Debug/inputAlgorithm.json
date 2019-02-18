@@ -1,0 +1,88 @@
+{
+  "Algorithm": [
+    {
+      "Operation": "Declare",
+      "Variable": "l",
+      "Type": "List"
+    },
+    {
+      "Operation": "Declare",
+      "Variable": "i",
+      "Type": "Number"
+    },
+    {
+      "Operation": "Set",
+      "Variable": "i",
+      "Value": {
+        "NumberValue": 1
+      }
+    },
+    {
+      "Operation": "While",
+      "Condition": "<",
+      "FirstPart": {
+        "SymbolicValue": "i"
+      },
+      "SecondPart": {
+        "SymbolicValue": "n"
+      },
+      "Algorithm": [
+        {
+          "Operation": "If",
+          "Condition": "==",
+          "FirstPart": {
+            "Operation": "%",
+            "FirstParam": {
+              "SymbolicValue": "n"
+            },
+            "SecondParam": {
+              "SymbolicValue": "i"
+            }
+          },
+          "SecondPart": {
+            "NumberValue": 0
+          },
+          "Algorithm": [
+            {
+              "Operation": "Append",
+              "Variable": "l",
+              "Value": {
+                "SymbolicValue": "i"
+              }
+            },
+            {
+              "Operation": "Append",
+              "Variable": "l",
+              "Value": {
+                "Operation": "-",
+                "FirstParam": {
+                  "NumberValue": 0
+                },
+                "SecondParam": {
+                  "SymbolicValue": "i"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Operation": "Set",
+          "Variable": "i",
+          "Value": {
+            "Operation": "+",
+            "FirstParam": {
+              "SymbolicValue": "i"
+            },
+            "SecondParam": {
+              "NumberValue": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Operation": "Return",
+      "Variable": "l"
+    }
+  ]
+}

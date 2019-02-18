@@ -1,0 +1,166 @@
+{
+  "SetOfPoints": [
+    {
+      "X": -99,
+      "Y": 580
+    },
+    {
+      "X": -77,
+      "Y": 322
+    },
+    {
+      "X": -71,
+      "Y": 268
+    },
+    {
+      "X": -13,
+      "Y": 357
+    },
+    {
+      "X": -20,
+      "Y": 150
+    },
+    {
+      "X": 0,
+      "Y": 10
+    },
+    {
+      "Point": {
+        "X": 15,
+        "Y": -500
+      }
+    },
+    {
+      "X": 25,
+      "Y": -400
+    },
+    {
+      "X": 55,
+      "Y": -600
+    },
+    {
+      "X": 99,
+      "Y": -678
+    }
+  ],
+  "Function": {
+    "Algorithm": [
+      {
+        "Operation": "Declare",
+        "Variable": "x",
+        "Type": "List"
+      },
+      {
+        "Operation": "Declare",
+        "Variable": "y",
+        "Type": "List"
+      },
+      {
+        "Operation": "Declare",
+        "Variable": "i",
+        "Type": "Number"
+      },
+      {
+        "Operation": "Set",
+        "Variable": "i",
+        "Value": {
+          "NumberValue": -100
+        }
+      },
+      {
+        "Operation": "While",
+        "Condition": "<",
+        "FirstPart": {
+          "SymbolicValue": "i"
+        },
+        "SecondPart": {
+          "NumberValue": 100
+        },
+        "Algorithm": [
+          {
+            "Operation": "If",
+            "Condition": "==",
+            "FirstPart": {
+              "Operation": "%",
+              "FirstParam": {
+                "SymbolicValue": "i"
+              },
+              "SecondParam": {
+                "NumberValue": 5
+              }
+            },
+            "SecondPart": {
+              "NumberValue": 0
+            },
+            "Algorithm": [
+              {
+                "Operation": "Append",
+                "Variable": "y",
+                "Value": {
+                  "Operation": "*",
+                  "FirstParam": {
+                    "SymbolicValue": "i"
+                  },
+                  "SecondParam": {
+                    "NumberValue": 7
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "Operation": "If",
+            "Condition": "!=",
+            "FirstPart": {
+              "Operation": "%",
+              "FirstParam": {
+                "SymbolicValue": "i"
+              },
+              "SecondParam": {
+                "NumberValue": 5
+              }
+            },
+            "SecondPart": {
+              "NumberValue": 0
+            },
+            "Algorithm": [
+              {
+                "Operation": "Append",
+                "Variable": "y",
+                "Value": {
+                  "Operation": "-",
+                  "FirstParam": {
+                    "SymbolicValue": "i"
+                  },
+                  "SecondParam": {
+                    "NumberValue": 7
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "Operation": "Append",
+            "Variable": "x",
+            "Value": {
+              "SymbolicValue": "i"
+            }
+          },
+          {
+            "Operation": "Set",
+            "Variable": "i",
+            "Value": {
+              "Operation": "+",
+              "FirstParam": {
+                "SymbolicValue": "i"
+              },
+              "SecondParam": {
+                "NumberValue": 2
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
